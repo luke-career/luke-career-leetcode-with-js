@@ -25,3 +25,28 @@ var maxScore = function (s) {
   }
   return max;
 };
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxScore = function (s) {
+  let oneNumber = 0;
+  for (let c of s) {
+    if (c == "1") {
+      oneNumber++;
+    }
+  }
+  let lValue = 0;
+  let rValue = oneNumber;
+  let maxNumber = 0;
+  for (let i = 0; i < s.length - 1; i++) {
+    if (s[i] == "0") {
+      lValue++;
+    } else {
+      rValue--;
+    }
+    maxNumber = Math.max(maxNumber, lValue + rValue);
+  }
+  return maxNumber;
+};
