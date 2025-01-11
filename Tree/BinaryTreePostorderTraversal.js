@@ -16,6 +16,7 @@ var postorderTraversal = function (root) {
     if (!node) return;
     helper(node.left);
     helper(node.right);
+
     res.push(node.val);
   };
 
