@@ -3,7 +3,8 @@
  * @return {number}
  */
 var removeDuplicates = function (nums) {
-  let l = 0;
+
+  let l=0;
 
   let r = 0;
 
